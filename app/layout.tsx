@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { HotelProvider } from "@/context/HotelProvider";
-import { Header } from "@/components/Header";
-import { ReadyGate } from "@/components/ReadyGate";
+import { AppLayoutWrapper } from "@/components/AppLayoutWrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -23,10 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="vi">
       <body className="flex min-h-screen flex-col">
         <HotelProvider>
-          <Header />
-          <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-            <ReadyGate>{children}</ReadyGate>
-          </main>
+          <AppLayoutWrapper>{children}</AppLayoutWrapper>
         </HotelProvider>
       </body>
     </html>
