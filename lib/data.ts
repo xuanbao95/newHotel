@@ -17,6 +17,7 @@ export const ROOM_PRICES: Record<RoomType, number> = {
   "Đơn": 300000,
   "Đôi": 450000,
   "Gia đình": 650000,
+  
 };
 
 /** Giá phòng theo giờ (giờ đầu tiên và mỗi giờ tiếp theo) */
